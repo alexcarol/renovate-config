@@ -1,5 +1,5 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-inherited-schema.json",
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:best-practices", "packages:stylelint"],
   "lockFileMaintenance": {
     "enabled": true
