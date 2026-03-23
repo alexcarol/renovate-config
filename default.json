@@ -8,7 +8,9 @@
     {
       "description": "Group Cloudflare build/deploy toolchain",
       "groupName": "cloudflare",
-      "matchPackageNames": ["wrangler"]
+      "matchPackageNames": ["wrangler"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
     },
     {
       "description": "Automerge pure dev tooling (linting, testing) for minor/patch",
