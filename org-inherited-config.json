@@ -1,0 +1,32 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-inherited-schema.json",
+  "extends": ["config:best-practices", "packages:stylelint"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "description": "Group Cloudflare build/deploy toolchain",
+      "groupName": "cloudflare",
+      "matchPackageNames": ["wrangler"]
+    },
+    {
+      "description": "Automerge pure dev tooling (linting, testing) for minor/patch",
+      "matchPackageNames": [
+        "eslint",
+        "@eslint/js",
+        "globals",
+        "stylelint",
+        "stylelint-config-standard",
+        "karma",
+        "karma-chrome-launcher",
+        "karma-coverage",
+        "karma-jasmine",
+        "karma-jasmine-html-reporter",
+        "jasmine-core"
+      ],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
+}
