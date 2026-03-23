@@ -1,0 +1,12 @@
+{
+  "name": "renovate-config",
+  "private": true,
+  "description": "Shared Renovate configuration presets",
+  "scripts": {
+    "validate": "npx --package renovate --yes renovate-config-validator default.json",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

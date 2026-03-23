@@ -1,0 +1,1 @@
+npx --package renovate --yes renovate-config-validator default.json
