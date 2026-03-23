@@ -26,7 +26,8 @@
         "karma-coverage",
         "karma-jasmine",
         "karma-jasmine-html-reporter",
-        "jasmine-core"
+        "jasmine-core",
+        "knip"
       ],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
