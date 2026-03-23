@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:best-practices", "packages:stylelint"],
+  "platformAutomerge": false,
   "lockFileMaintenance": {
     "enabled": true
   },
