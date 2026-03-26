@@ -27,7 +27,8 @@
         "karma-jasmine",
         "karma-jasmine-html-reporter",
         "jasmine-core",
-        "knip"
+        "knip",
+        "typescript-eslint"
       ],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
