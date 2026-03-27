@@ -16,4 +16,6 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - run: npx --package renovate --yes renovate-config-validator default.json
+      - run: npm ci
+
+      - run: npm run validate
