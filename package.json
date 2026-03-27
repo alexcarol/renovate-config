@@ -3,10 +3,11 @@
   "private": true,
   "description": "Shared Renovate configuration presets",
   "scripts": {
-    "validate": "npx --package renovate --yes renovate-config-validator default.json",
+    "validate": "renovate-config-validator default.json",
     "prepare": "husky"
   },
   "devDependencies": {
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "renovate": "43.92.1"
   }
 }
