@@ -5,7 +5,33 @@
   "lockFileMaintenance": {
     "enabled": true
   },
+  "customDatasources": {
+    "cloudflare-compatibility-date": {
+      "defaultRegistryUrlTemplate": "https://api.github.com/repos/cloudflare/workerd/releases?per_page=20",
+      "transformTemplates": [
+        "{ \"releases\": [$map($, function($v) { $contains($v.tag_name, /^v\\d+\\.\\d{8}\\.\\d+$/) ? { \"version\": $substring($v.tag_name, 3, 4) & \"-\" & $substring($v.tag_name, 7, 2) & \"-\" & $substring($v.tag_name, 9, 2) } }) [version]] }"
+      ]
+    }
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update Cloudflare Workers compatibility_date in wrangler config",
+      "managerFilePatterns": ["**/wrangler.{json,jsonc,toml}"],
+      "matchStrings": [
+        "\"?compatibility_date\"?\\s*[:=]\\s*\"(?<currentValue>\\d{4}-\\d{2}-\\d{2})\""
+      ],
+      "depNameTemplate": "cloudflare/workerd",
+      "datasourceTemplate": "custom.cloudflare-compatibility-date",
+      "versioningTemplate": "regex:^(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2})$"
+    }
+  ],
   "packageRules": [
+    {
+      "description": "Update Cloudflare Workers compatibility_date (never automerge)",
+      "matchDepNames": ["cloudflare/workerd"],
+      "automerge": false
+    },
     {
       "description": "Group Cloudflare build/deploy toolchain",
       "groupName": "cloudflare",
