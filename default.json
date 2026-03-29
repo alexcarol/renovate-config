@@ -9,7 +9,7 @@
     "cloudflare-compatibility-date": {
       "defaultRegistryUrlTemplate": "https://api.github.com/repos/cloudflare/workerd/releases?per_page=20",
       "transformTemplates": [
-        "{ \"releases\": [$map($, function($v) { $contains($v.tag_name, /^v\\d+\\.\\d{8}\\.\\d+$/) ? { \"version\": $substring($v.tag_name, 3, 4) & \"-\" & $substring($v.tag_name, 7, 2) & \"-\" & $substring($v.tag_name, 9, 2) } }) [version]] }"
+        "{ \"releases\": [$map($, function($v) { $contains($v.tag_name, /^v\\d+\\.\\d{8}\\.\\d+$/) ? { \"version\": $substring($v.tag_name, 3, 4) & \"-\" & $substring($v.tag_name, 7, 2) & \"-\" & $substring($v.tag_name, 9, 2), \"changelogUrl\": \"https://github.com/cloudflare/workerd/releases/tag/\" & $v.tag_name } }) [version]], \"sourceUrl\": \"https://github.com/cloudflare/workerd\" }"
       ]
     }
   },
