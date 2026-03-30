@@ -8,6 +8,6 @@
   },
   "devDependencies": {
     "husky": "9.1.7",
-    "renovate": "43.92.1"
+    "renovate": "43.95.0"
   }
 }
