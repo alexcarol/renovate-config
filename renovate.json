@@ -1,4 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>alexcarol/renovate-config"]
+  "extends": ["local>alexcarol/renovate-config"],
+  "platformAutomerge": true
 }
