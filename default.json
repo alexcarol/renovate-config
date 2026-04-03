@@ -55,7 +55,8 @@
         "jasmine-core",
         "knip",
         "typescript-eslint",
-        "vitest"
+        "vitest",
+        "renovate"
       ],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
