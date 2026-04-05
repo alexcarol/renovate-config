@@ -28,9 +28,10 @@
   ],
   "packageRules": [
     {
-      "description": "Update Cloudflare Workers compatibility_date (never automerge)",
+      "description": "Update Cloudflare Workers compatibility_date monthly (never automerge)",
       "matchDepNames": ["cloudflare/workerd"],
-      "automerge": false
+      "automerge": false,
+      "schedule": ["on the first day of the month"]
     },
     {
       "description": "Group Cloudflare build/deploy toolchain",
