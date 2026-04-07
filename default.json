@@ -41,6 +41,11 @@
       "automerge": true
     },
     {
+      "description": "Never automerge major updates",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
       "description": "Automerge pure dev tooling (linting, testing) for minor/patch",
       "matchPackageNames": [
         "eslint",
@@ -54,6 +59,7 @@
         "karma-jasmine",
         "karma-jasmine-html-reporter",
         "jasmine-core",
+        "html-validate",
         "knip",
         "typescript-eslint",
         "vitest",
