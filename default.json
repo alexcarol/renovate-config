@@ -41,6 +41,12 @@
       "automerge": true
     },
     {
+      "description": "Never automerge major updates for dev dependencies",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
       "description": "Automerge pure dev tooling (linting, testing) for minor/patch",
       "matchPackageNames": [
         "eslint",
