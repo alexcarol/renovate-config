@@ -54,6 +54,7 @@
         "karma-jasmine",
         "karma-jasmine-html-reporter",
         "jasmine-core",
+        "html-validate",
         "knip",
         "typescript-eslint",
         "vitest",
