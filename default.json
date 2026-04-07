@@ -41,8 +41,7 @@
       "automerge": true
     },
     {
-      "description": "Never automerge major updates for dev dependencies",
-      "matchDepTypes": ["devDependencies"],
+      "description": "Never automerge major updates",
       "matchUpdateTypes": ["major"],
       "automerge": false
     },
