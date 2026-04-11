@@ -67,6 +67,13 @@
       ],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
+    },
+    {
+      "description": "Automerge any eslint-* devDependency for minor/patch",
+      "matchDepTypes": ["devDependencies"],
+      "matchPackageNames": ["eslint**", "@eslint/**"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
     }
   ]
 }
