@@ -62,6 +62,7 @@
         "karma-jasmine-html-reporter",
         "jasmine-core",
         "html-validate",
+        "@fulldecent/nice-checkers-plugin",
         "knip",
         "vitest",
         "renovate"
