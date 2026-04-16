@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices", "packages:stylelint"],
+  "extends": ["config:best-practices", "packages:stylelint", "group:allNonMajor"],
   "platformAutomerge": false,
   "lockFileMaintenance": {
     "enabled": true
@@ -34,11 +34,12 @@
       "schedule": ["on the first day of the month"]
     },
     {
-      "description": "Group Cloudflare build/deploy toolchain",
+      "description": "Group Cloudflare build/deploy toolchain (monthly)",
       "groupName": "cloudflare",
       "matchPackageNames": ["wrangler"],
       "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true
+      "automerge": true,
+      "schedule": ["on the first day of the month"]
     },
     {
       "description": "Never automerge major updates",
@@ -46,7 +47,8 @@
       "automerge": false
     },
     {
-      "description": "Automerge pure dev tooling (linting, testing) for minor/patch",
+      "description": "Group and automerge pure dev tooling (linting, testing) for minor/patch",
+      "groupName": "dev-tooling",
       "matchDepTypes": ["devDependencies"],
       "matchPackageNames": [
         "eslint**",
